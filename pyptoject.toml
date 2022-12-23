@@ -3,7 +3,7 @@ requires = ["setuptools", "setuptools_scm", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "msaki"
+name = "Analyst"
 version = "0.0.1"
 description = "A simple Python package for analytics and investing tools"
 readme = "README.rst"
