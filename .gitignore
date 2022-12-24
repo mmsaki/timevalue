@@ -24,7 +24,7 @@ var/
 .env
 /.pytest_cache
 /**/__pycache__
-*.egg-info/
+/src/analytica.egg-info/
 
 # Installer logs
 pip-log.txt
