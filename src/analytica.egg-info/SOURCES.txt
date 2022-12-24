@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+src/__main__.py
+src/analytica/__init__.py
+src/analytica/__main__.py
+src/analytica/investing.py
+src/analytica.egg-info/PKG-INFO
+src/analytica.egg-info/SOURCES.txt
+src/analytica.egg-info/dependency_links.txt
+src/analytica.egg-info/top_level.txt
+src/tests/test_future_value_of_money.py
