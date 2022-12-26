@@ -1,10 +1,10 @@
 [buld-system]
-requires = ["setuptools", "setuptools_scm", "wheel"]
+requires = ["setuptools", "setuptools_scm"]
 build-backend = "setuptools.build_meta"
 
 [project]
 name = "analytica"
-version = "0.0.1"
+version = "1.0.0"
 description = "A simple Python package for analytics and investing tools"
 readme = "README.rst"
 requires-python = ">=3.7"
@@ -14,7 +14,6 @@ classifiers = [
     "Development Status :: 1 - Alpha",
     "Intended Audience :: Developers",
     "Intended Audience :: Financial and Insurance Industry",
-    "Operating System :: OS Independent",
     "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
@@ -25,3 +24,5 @@ maintainers = [
     {name = "Meek Msaki", email= "meek.dev3@gmail.com"},
     ]
 
+[project.scripts]
+analytica = "analytica.__main__:main"
