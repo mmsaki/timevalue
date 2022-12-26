@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: analytica
+Version: 1.0.0
+Summary: A simple Python package for analytics and investing tools
+Author: Meek Msaki
+Author-email: meek.dev3@gmail.com
+Maintainer-email: Meek Msaki <meek.dev3@gmail.com>
+Keywords: analytics,investing,finance
+Classifier: Development Status :: 1 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Financial and Insurance Industry
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Topic :: Office/Business :: Financial :: Investment
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.7
+Description-Content-Type: text/x-rst
+License-File: LICENSE
