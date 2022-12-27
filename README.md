@@ -8,7 +8,7 @@ Notice that a venv directory is created in the project folder. To activate the v
 
 Next, install package using `python -m pip install .`
 
-Use analytica in your cli bash terminal.
+Use analytica in your command line interface / Terminal.
 
 ```bash
 analytica 1000, .03, 2 #returns 1060.9
