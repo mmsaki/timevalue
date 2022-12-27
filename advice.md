@@ -1,6 +1,6 @@
 # Advice Analytica
 
-1. Is it a PRODUCT, FEATURE, COMPANY i.e These ideas ---> messaging (twitter), photosharing(instagram), check-in, directory(facebook)
+1. Is it a PRODUCT, FEATURE, COMPANY i.e Simple features expanded to company ---> messaging == (twitter), photosharing == (instagram), directory == (facebook)
 2. Can the product turn into a companies.
 3. Map of how people will spend money on your product and how they will make money from it.
 4. Someone who does product marketing should tell what the engineer to do.
@@ -36,7 +36,7 @@
 34. Everytime you hear a need. Make sure you hear it right.
 35. What would you pay for that?
 36. Whould you be ready to write me a check?
-37.  Repeatable product.
+37. Repeatable product.
 38. ---> Needs need to be common.
 39. ---> Minimal Viable Product
 40. ---> it's not about the size of the market
