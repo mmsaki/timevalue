@@ -26,6 +26,7 @@ var/
 /**/__pycache__
 /src/analytica.egg-info/
 roadmap.md
+advice.md
 
 # Installer logs
 pip-log.txt
