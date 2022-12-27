@@ -25,6 +25,7 @@ var/
 /.pytest_cache
 /**/__pycache__
 /src/analytica.egg-info/
+roadmap.md
 
 # Installer logs
 pip-log.txt
