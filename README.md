@@ -16,5 +16,5 @@ analytica <present_value> <interest_rate> <time>
 from analytica.investing import money
 
 initialize = money.Calculate()
-initialize.future_value_of_money(present_value, interest_rate, time)
+initialize.future_value_of_money(1000, .03, 2)
 ```
