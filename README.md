@@ -23,16 +23,16 @@ python -m pip install .
 Use analytica in your command line interface / Terminal.
 
 ```bash
-analytica 1000, .03, 2 #returns 1060.9
+analytica 1000, .03, 2 #returns 1060.90
 
 ```
 
 ## Using import within python projects
 
 ```python3
-In [1]: from analytica.investing import money
+In [1]: from analytica.investing import time_value_money
 
-In [2]: initialize = money.Calculate()
+In [2]: initialize = time_value_money.TimeValueOfMoney()
 
 In [3]: initialize.future_value_of_money(1000, .03, 2)
 Out[3]: 1060.9
