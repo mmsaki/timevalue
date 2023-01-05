@@ -17,7 +17,7 @@ source ./venv/bin/activate
 Next, install package using
 
 ```bash
-python -m pip install .
+python -m pip install -e .
 ```
 
 Use analytica in your command line interface / Terminal.
