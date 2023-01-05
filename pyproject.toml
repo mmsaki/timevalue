@@ -26,3 +26,5 @@ maintainers = [
 
 [project.scripts]
 analytica = "analytica.__main__:main"
+present = "analytica.present:main"
+future = "analytica.future:main"
