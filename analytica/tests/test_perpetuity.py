@@ -1,5 +1,3 @@
-import pytest
-
 from analytica.investing import perpetuity
 
 
