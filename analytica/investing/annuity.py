@@ -1,5 +1,26 @@
 from decimal import Decimal
 
+"""Annuity Class.
+
+This module contains the Annuity class, which contains methods for calculating
+the future value of annuity, present value of annuity, future value of annuity
+due and present value of annuity due.
+
+Definitions:
+    Annuity: An annuity is a series of equal cash flows that occur at regular
+        intervals.
+    Annuity Due: An annuity due is an annuity that starts at the beginning of the
+        period.
+    IRA vs Annuity: An IRA is a retirement account that allows you to invest in
+        stocks, bonds, mutual funds, and other investments. An annuity is a
+        contract between you and an insurance company that pays you a fixed
+        amount of money each year for the rest of your life.
+
+References:
+    https://www.investopedia.com/terms/a/annuity.asp
+    https://www.investopedia.com/terms/a/annuitydue.asp
+"""
+
 
 class Annuity:
     def __init__(self):
