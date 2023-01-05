@@ -28,3 +28,4 @@ maintainers = [
 analytica = "analytica.__main__:main"
 present = "analytica.present:main"
 future = "analytica.future:main"
+annuity = "analytica.annuity:main"
