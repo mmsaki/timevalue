@@ -2,7 +2,7 @@
 
 Analytica is a simple Python package for analytics and investing tools
 
-Before using the tool create a virtual envirinment
+Before using the tool create a virtual environment
 
 ```bash
 python -m venv venv
