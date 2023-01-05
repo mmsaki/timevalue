@@ -1,17 +1,16 @@
-import sys
+import argparse
 from decimal import Decimal
-
 from analytica.investing import time_value_money
 
+parser = argparse.ArgumentParser(description="Calculate present value of money.")
+parser.add_argument("future_value", type=float, help="future value")
+parser.add_argument("interest_rate", type=float, help="interest rate")
+parser.add_argument("time", type=int, help="time")
 
 def main():
-    if len(sys.argv) < 3 or len(sys.argv) > 4:
-        print("Usage: present <future_value> <interest_rate> <time>")
-        sys.exit(1)
-
-    future_value, interest_rate, time = sys.argv[1], sys.argv[2], sys.argv[3]
+    args = parser.parse_args()
     calculate = time_value_money.TimeValueOfMoney()
-    fv = calculate.present_value_of_money(future_value, interest_rate, time)  # type: ignore
+    fv = calculate.present_value_of_money(args.future_value, args.interest_rate, args.time)  # type: ignore
     print(Decimal(fv).quantize(Decimal("0.01"), rounding="ROUND_HALF_UP"))
 
 
