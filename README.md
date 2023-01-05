@@ -5,7 +5,7 @@ Analytica is a simple Python package for analytics and investing tools
 Before using the tool create a virtual envirinment
 
 ```bash
-python -m venv
+python -m venv venv
 ```
 
 Notice that a venv directory is created in the project folder. To activate the virtual environemnt run
