@@ -149,8 +149,8 @@ class Annuity:
             * (
                 1 - ((1 + Decimal(str(growth_rate))) / (1 + Decimal(str(interest_rate))))
                 ** Decimal(str(time))
+            )
         )
-    )
 
     # Future value of growing annuity due
     def future_value_of_growing_annuity_due(
