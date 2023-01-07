@@ -39,20 +39,20 @@ class Perpetuity:
 
     # Present value of perpetuity due
     def present_value_of_perpetuity_due(
-        self, future_value: int, interest_rate: int
+        self, cash_flow: int, interest_rate: int
     ) -> float:
         """Calculate the present value of perpetuity due.
-        pvpd = fv * r / (1 + r)
+        pvpd = c / r * (1 + r)
         Args:
-            future_value (float): The future value of the investment.
+            cash_flow (float): The future value of the investment.
             interest_rate (float): The interest rate of the investment.
             Returns:
                 float: The present value of perpetuity due.
         """
         return float(
-            Decimal(str(future_value))
-            * Decimal(str(interest_rate))
-            / (1 + Decimal(str(interest_rate)))
+            Decimal(str(cash_flow))
+            / Decimal(str(interest_rate))
+            * (1 + Decimal(str(interest_rate)))
         )
 
     # Present value of growing perpetuity
@@ -75,10 +75,10 @@ class Perpetuity:
 
     # Present value of growing perpetuity due
     def present_value_of_growing_perpetuity_due(
-        self, future_value: int, interest_rate: int, growth_rate: int
+        self, cash_flow: int, interest_rate: int, growth_rate: int
     ) -> float:
         """Calculate the present value of growing perpetuity due.
-        pvgpd = fv * (r - gr) / ((1 + gr) * (1 + r))
+        pvgpd = c * (r - gr) / ((1 + gr) * (1 + r))
         Args:
             future_value (float): The future value of the investment.
             interest_rate (float): The interest rate of the investment.
@@ -87,7 +87,7 @@ class Perpetuity:
                 float: The present value of growing perpetuity due.
         """
         return float(
-            Decimal(str(future_value))
+            Decimal(str(cash_flow))
             * (Decimal(str(interest_rate)) - Decimal(str(growth_rate)))
             / ((1 + Decimal(str(growth_rate))) * (1 + Decimal(str(interest_rate))))
         )
