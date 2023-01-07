@@ -236,7 +236,7 @@ class Annuity:
         fv: bool = False,
     ) -> float:
         """Calculate the future value of growing annuity due.
-        fvga = c * ((1+r)**t - (1+gr)**t) / (r - gr) * (1+r)
+        fvgad = c * ((1+r)**t - (1+gr)**t) / (r - gr) * (1+r)
         Args:
             present_value (float): The present value of the investment.
             interest_rate (float): The interest rate of the investment.
