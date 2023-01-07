@@ -22,9 +22,6 @@ group.add_argument(
     help="future value",
 )
 
-group0 = parser.add_mutually_exclusive_group()
-group0.add_argument("--pv", action="store_true", help="present value")
-group0.add_argument("--fv", action="store_true", help="future value")
 
 parser.add_argument(
     "-i",
@@ -48,6 +45,14 @@ parser.add_argument(
     type=float,
     help="growth rate",
     metavar="",
+)
+
+group0 = parser.add_mutually_exclusive_group()
+group0.add_argument(
+    "--pv", action="store_true", help="reverse calculate the present value (bool)"
+)
+group0.add_argument(
+    "--fv", action="store_true", help="reverse calculate the future value (bool)"
 )
 
 
