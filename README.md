@@ -40,3 +40,37 @@ Out[3]: 1060.9
 In [4]: initialize.present_value_of_money(1000, .03, 2)
 Out[4]: 942.5959091337544
 ```
+
+## Calculating annuinty value
+
+Annuity are payments are that are paid to you as a steady stream of income. Heres an example of growing annuity due.
+
+```bash
+annuity --future_value --due --cash_flow 1000 --interest_rate 0.02 --time 3 --growth_rate .10
+```
+
+Output:
+
+```bash
+3709.576
+```
+
+You can access the help by using `annuity --help`.
+
+```bash
+usage: annuity [-h] [-c] [-p | -f] -i  -t  [-d] [-g] [--pv | --fv]
+
+Calculate annuity payments.
+
+options:
+  -h, --help            show this help message and exit
+  -c , --cash_flow      cash flow
+  -p, --present_value   present value
+  -f, --future_value    future value
+  -i , --interest_rate  interest rate
+  -t , --time           time
+  -d, --due             With an annuity due, payments are made at the beginning of each period
+  -g , --growth_rate    growth rate
+  --pv                  reverse calculate the present value (bool)
+  --fv                  reverse calculate the future value (bool)
+```
