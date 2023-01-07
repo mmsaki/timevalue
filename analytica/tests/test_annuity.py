@@ -7,9 +7,9 @@ def test_present_value_annuity():
     """
     # Arrange
     cash_flow = 1000
-    interest_rate = 0.05
-    time = 5
-    expected = 1000 * ((1 - (1 + 0.05) ** -5) / 0.05)
+    interest_rate = 0.06
+    time = 3
+    expected = 1000 * ((1 - (1 + 0.06) ** -3) / 0.06)
     # Actual 2673.01
     actual = annuity.Annuity().present_value_of_annuity(
         cash_flow, interest_rate, time  # type: ignore
