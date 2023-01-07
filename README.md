@@ -8,7 +8,7 @@ Before using the tool create a virtual environment
 python -m venv venv
 ```
 
-Notice that a venv directory is created in the project folder. To activate the virtual environemnt run
+Notice that a `/venv` directory is created in the project folder. To activate the virtual environemnt run
 
 ```bash
 source ./venv/bin/activate
@@ -74,3 +74,5 @@ options:
   --pv                  reverse calculate the present value (bool)
   --fv                  reverse calculate the future value (bool)
 ```
+
+See more [examples](/analytica/examples/annuities.md).
