@@ -1,5 +1,4 @@
 import argparse
-from decimal import Decimal
 
 from analytica.investing import time_value_money
 
@@ -10,11 +9,11 @@ def main():
     parser.add_argument("interest_rate", type=float, help="interest rate")
     parser.add_argument("time", type=int, help="time")
     args = parser.parse_args()
-    calculate = time_value_money.TimeValueOfMoney()
-    fv = calculate.present_value_of_money(
+    calculate = time_value_money.TimeValueOfMoney(
         args.future_value, args.interest_rate, args.time
     )
-    print(Decimal(fv).quantize(Decimal("0.01"), rounding="ROUND_HALF_UP"))
+    fv = calculate.present_value_of_money()
+    print(round(fv, 2))
 
 
 if __name__ == "__main__":

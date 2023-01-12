@@ -55,9 +55,10 @@ reversed.add_argument(
     "--fv", action="store_true", help="reverse calculate the future value (bool)"
 )
 
+args = parser.parse_args()
+
 
 def ordinary_annuity():
-    args = parser.parse_args()
     calculate = annuity.Annuity(args.cash_flow, args.interest_rate, args.time)
     if (
         args.present_value
@@ -139,7 +140,6 @@ def ordinary_annuity():
 
 
 def growing_annuity():
-    args = parser.parse_args()
     calculate = annuity.GrowingAnnuity(
         args.cash_flow, args.interest_rate, args.growth_rate, args.time
     )
@@ -224,8 +224,10 @@ def growing_annuity():
 
 
 def main():
-    print(ordinary_annuity())
-    print(growing_annuity())
+    if not args.growth_rate:
+        print(ordinary_annuity())
+    else:
+        print(growing_annuity())
 
 
 if __name__ == "__main__":
