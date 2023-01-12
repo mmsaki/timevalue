@@ -47,18 +47,18 @@ parser.add_argument(
     metavar="",
 )
 
-group0 = parser.add_mutually_exclusive_group()
-group0.add_argument(
+reversed = parser.add_mutually_exclusive_group()
+reversed.add_argument(
     "--pv", action="store_true", help="reverse calculate the present value (bool)"
 )
-group0.add_argument(
+reversed.add_argument(
     "--fv", action="store_true", help="reverse calculate the future value (bool)"
 )
 
 
-def main():
+def ordinary_annuity():
     args = parser.parse_args()
-    calculate = annuity.Annuity()
+    calculate = annuity.Annuity(args.cash_flow, args.interest_rate, args.time)
     if (
         args.present_value
         and not args.pv
@@ -66,9 +66,7 @@ def main():
         and not args.due
         and not args.growth_rate
     ):
-        pv = calculate.present_value_of_annuity(
-            args.cash_flow, args.interest_rate, args.time
-        )
+        pv = calculate.present_value_of_annuity()
         return pv
     else:
         if (
@@ -78,9 +76,7 @@ def main():
             and not args.due
             and not args.growth_rate
         ):
-            pv = calculate.present_value_of_annuity(
-                args.cash_flow, args.interest_rate, args.time, args.pv
-            )
+            pv = calculate.present_value_of_annuity(pv=True)
             return pv
     if (
         args.present_value
@@ -89,9 +85,7 @@ def main():
         and not args.fv
         and not args.growth_rate
     ):
-        pv = calculate.present_value_of_annuity_due(
-            args.cash_flow, args.interest_rate, args.time
-        )
+        pv = calculate.present_value_of_annuity_due()
         return pv
     else:
         if (
@@ -101,57 +95,7 @@ def main():
             and not args.fv
             and not args.growth_rate
         ):
-            pv = calculate.present_value_of_annuity_due(
-                args.cash_flow, args.interest_rate, args.time, args.pv
-            )
-            return pv
-
-    if (
-        args.present_value
-        and args.growth_rate
-        and not args.due
-        and not args.pv
-        and not args.fv
-    ):
-        pv = calculate.present_value_of_growing_annuity(
-            args.cash_flow, args.interest_rate, args.time, args.growth_rate
-        )
-        return pv
-    else:
-        if (
-            args.present_value
-            and args.growth_rate
-            and args.pv
-            and not args.due
-            and not args.fv
-        ):
-            pv = calculate.present_value_of_growing_annuity(
-                args.cash_flow, args.interest_rate, args.time, args.growth_rate, args.pv
-            )
-            return pv
-
-    if (
-        args.present_value
-        and args.growth_rate
-        and args.due
-        and not args.pv
-        and not args.fv
-    ):
-        pv = calculate.present_value_of_growing_annuity_due(
-            args.cash_flow, args.interest_rate, args.time, args.growth_rate
-        )
-        return pv
-    else:
-        if (
-            args.present_value
-            and args.growth_rate
-            and args.due
-            and args.pv
-            and not args.fv
-        ):
-            pv = calculate.present_value_of_growing_annuity_due(
-                args.cash_flow, args.interest_rate, args.time, args.growth_rate, args.pv
-            )
+            pv = calculate.present_value_of_annuity_due(pv=True)
             return pv
 
     if (
@@ -161,9 +105,7 @@ def main():
         and not args.growth_rate
         and not args.due
     ):
-        fv = calculate.future_value_of_annuity(
-            args.cash_flow, args.interest_rate, args.time
-        )
+        fv = calculate.future_value_of_annuity()
         return fv
     else:
         if (
@@ -173,9 +115,7 @@ def main():
             and not args.growth_rate
             and not args.pv
         ):
-            fv = calculate.future_value_of_annuity(
-                args.cash_flow, args.interest_rate, args.time, args.fv
-            )
+            fv = calculate.future_value_of_annuity(fv=True)
             return fv
     if (
         args.future_value
@@ -184,9 +124,7 @@ def main():
         and not args.fv
         and not args.pv
     ):
-        fv = calculate.future_value_of_annuity_due(
-            args.cash_flow, args.interest_rate, args.time
-        )
+        fv = calculate.future_value_of_annuity_due()
         return fv
     else:
         if (
@@ -196,10 +134,55 @@ def main():
             and not args.growth_rate
             and not args.pv
         ):
-            fv = calculate.future_value_of_annuity_due(
-                args.cash_flow, args.interest_rate, args.time, args.fv
-            )
+            fv = calculate.future_value_of_annuity_due(fv=True)
             return fv
+
+
+def growing_annuity():
+    args = parser.parse_args()
+    calculate = annuity.GrowingAnnuity(
+        args.cash_flow, args.interest_rate, args.growth_rate, args.time
+    )
+    if (
+        args.present_value
+        and args.growth_rate
+        and not args.due
+        and not args.pv
+        and not args.fv
+    ):
+        pv = calculate.present_value_of_growing_annuity()
+        return pv
+    else:
+        if (
+            args.present_value
+            and args.growth_rate
+            and args.pv
+            and not args.due
+            and not args.fv
+        ):
+            pv = calculate.present_value_of_growing_annuity(pv=True)
+            return pv
+
+    if (
+        args.present_value
+        and args.growth_rate
+        and args.due
+        and not args.pv
+        and not args.fv
+    ):
+        pv = calculate.present_value_of_growing_annuity_due()
+        return pv
+    else:
+        if (
+            args.present_value
+            and args.growth_rate
+            and args.due
+            and args.pv
+            and not args.fv
+        ):
+            pv = calculate.present_value_of_growing_annuity_due(pv=True)
+            return pv
+
     if (
         args.future_value
         and args.growth_rate
@@ -207,9 +190,7 @@ def main():
         and not args.fv
         and not args.pv
     ):
-        fv = calculate.future_value_of_growing_annuity(
-            args.cash_flow, args.interest_rate, args.time, args.growth_rate
-        )
+        fv = calculate.future_value_of_growing_annuity()
         return fv
     else:
         if (
@@ -219,9 +200,7 @@ def main():
             and not args.due
             and not args.pv
         ):
-            fv = calculate.future_value_of_growing_annuity(
-                args.cash_flow, args.interest_rate, args.time, args.growth_rate, args.fv
-            )
+            fv = calculate.future_value_of_growing_annuity(fv=True)
             return fv
     if (
         args.future_value
@@ -230,9 +209,7 @@ def main():
         and not args.fv
         and not args.pv
     ):
-        fv = calculate.future_value_of_growing_annuity_due(
-            args.cash_flow, args.interest_rate, args.time, args.growth_rate
-        )
+        fv = calculate.future_value_of_growing_annuity_due()
         return fv
     else:
         if (
@@ -242,7 +219,14 @@ def main():
             and args.fv
             and not args.pv
         ):
-            fv = calculate.future_value_of_growing_annuity_due(
-                args.cash_flow, args.interest_rate, args.time, args.growth_rate, args.fv
-            )
+            fv = calculate.future_value_of_growing_annuity_due(fv=True)
             return fv
+
+
+def main():
+    print(ordinary_annuity())
+    print(growing_annuity())
+
+
+if __name__ == "__main__":
+    main()
