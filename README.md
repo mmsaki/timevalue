@@ -46,7 +46,7 @@ Out[4]: 942.5959091337544
 Annuity are payments are that are paid to you as a steady stream of income. Heres an example of growing annuity due.
 
 ```bash
-annuity --future_value --due --cash_flow 1000 --interest_rate 0.02 --time 3 --growth_rate .10
+annuity --future_value --due --cash_flow 1000 --interest_rate 0.06 --time 3 --growth_rate .10
 ```
 
 Output:

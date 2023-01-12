@@ -7,13 +7,11 @@
 - Growing Annuity:
   - A series of payments or receipts occurring over a specified number of periods that increase each period at a constant percentage. In a growing ordinary annuity, payments or receipts occur at the end of each period; in a growing annuity due, payments or receipts occur at the beginning of each period.
 
-![Example](/images/fvga.jpg)
+![Example](/analytica/images/fvga.jpg)
 
 ## Examples for annuity
 
 The future value of a growing ordinary annuity (FVGA) answers questions like the following: "If R1 dollars, increasing each year at an annual rate g, are deposited in an account at the end of each year for n years, and if the deposits earn interest rate i compounded annually, what will be the value of the account at the end of n years?"
-
-![Example Questions](/images/sample-examples.png)
 
 ## Example 1
 
