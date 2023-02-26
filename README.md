@@ -1,6 +1,6 @@
-# analytica
+# Timevalue
 
-Analytica is a simple Python package for analytics and investing tools
+Timevalue is a simple Python package for analytics and investing tools
 
 Before using the tool create a virtual environment
 
@@ -20,17 +20,17 @@ Next, install package using
 python -m pip install -e .
 ```
 
-Use analytica in your command line interface / Terminal.
+Use timevalue in your command line interface / Terminal.
 
 ```bash
-analytica 1000, .03, 2 #returns 1060.90
+timevalue 1000, .03, 2 #returns 1060.90
 
 ```
 
 ## Using import within python projects
 
 ```python3
-In [1]: from analytica.investing import time_value_money
+In [1]: from timevalue.investing import time_value_money
 
 In [2]: initialize = time_value_money.TimeValueOfMoney()
 
@@ -75,4 +75,4 @@ options:
   --fv                  reverse calculate the future value (bool)
 ```
 
-See more [examples](/analytica/examples/annuities.md).
+See more [examples](/timevalue/examples/annuities.md).
