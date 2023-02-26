@@ -64,4 +64,4 @@ In [4]: initialize.present_value_of_money(1000, .03, 2)
 Out[4]: 942.5959091337544
 ```
 
-See more [examples](/timevalue/examples/annuities.md).
+See more [examples](https://github.com/mmsaki/timevalue/blob/main/src/timevalue/examples/annuities.md).
