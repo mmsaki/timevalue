@@ -1,49 +1,42 @@
 # Timevalue
 
-Timevalue is a simple Python package for analytics and investing tools
-
-Before using the tool create a virtual environment
+Timevalue is a simple Python package for finding the time value of money
 
 ```bash
-python -m venv venv
+pip install timevalue
 ```
 
-Notice that a `/venv` directory is created in the project folder. To activate the virtual environemnt run
+## Future & Present Cli Commands
+
+Find future value of money for $1000$ at $0.03%$ interest for $2$ periods:
 
 ```bash
-source ./venv/bin/activate
+future 1000 .03 2 #returns 1060.90
 ```
 
-Next, install package using
+Find present value of money for $1000$ at $0.03%$ interest for $2$ periods:
 
 ```bash
-python -m pip install -e .
+present 1000 .03 2 #returns 942.60
 ```
 
-Use timevalue in your command line interface / Terminal.
+## Annuity Cli Command
+
+Annuities are payments are that are paid to you as a steady stream of income. Heres an example annuity.
+
+Q1. Find the future value of an annuity cash flow of $1000$ with and interest rate of $0.06$ for $3$ periods.
 
 ```bash
-timevalue 1000, .03, 2 #returns 1060.90
-
+annuity --future_value --cash_flow 1000 --interest_rate 0.06 --time 3 # returns 2673.011949461636
 ```
 
-## Using import within python projects
+Say we want calculate the annuity present value given the cash flow as the result from Q1, use the `--present_value` and `--pv` flag to get the cash flow value:
 
-```python3
-In [1]: from timevalue.investing import time_value_money
-
-In [2]: initialize = time_value_money.TimeValueOfMoney()
-
-In [3]: initialize.future_value_of_money(1000, .03, 2)
-Out[3]: 1060.9
-
-In [4]: initialize.present_value_of_money(1000, .03, 2)
-Out[4]: 942.5959091337544
+```bash
+annuity --present_value --cash_flow 2673.011949461636 --interest_rate 0.06 --time 3 --pv
 ```
 
-## Calculating annuinty value
-
-Annuity are payments are that are paid to you as a steady stream of income. Heres an example of growing annuity due.
+Heres an example of growing annuity due.
 
 ```bash
 annuity --future_value --due --cash_flow 1000 --interest_rate 0.06 --time 3 --growth_rate .10
@@ -57,22 +50,18 @@ Output:
 
 You can access the help by using `annuity --help`.
 
-```bash
-usage: annuity [-h] [-c] [-p | -f] -i  -t  [-d] [-g] [--pv | --fv]
+## Import timevalue package
 
-Calculate annuity payments.
+```python3
+In [1]: from timevalue.investing import time_value_money
 
-options:
-  -h, --help            show this help message and exit
-  -c , --cash_flow      cash flow
-  -p, --present_value   present value
-  -f, --future_value    future value
-  -i , --interest_rate  interest rate
-  -t , --time           time
-  -d, --due             With an annuity due, payments are made at the beginning of each period
-  -g , --growth_rate    growth rate
-  --pv                  reverse calculate the present value (bool)
-  --fv                  reverse calculate the future value (bool)
+In [2]: initialize = time_value_money.TimeValueOfMoney()
+
+In [3]: initialize.future_value_of_money(1000, .03, 2)
+Out[3]: 1060.9
+
+In [4]: initialize.present_value_of_money(1000, .03, 2)
+Out[4]: 942.5959091337544
 ```
 
 See more [examples](/timevalue/examples/annuities.md).
