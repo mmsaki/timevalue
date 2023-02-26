@@ -6,7 +6,7 @@ parser = argparse.ArgumentParser(
     description="Calculate annuity payments.", conflict_handler="resolve"
 )
 
-parser.add_argument("-c", "--cash_flow", type=float, help="Cash flow", metavar="")
+parser.add_argument("-c", "--cash_flow", type=float, help="cash flow", metavar="")
 
 group = parser.add_mutually_exclusive_group()
 group.add_argument(
@@ -49,10 +49,14 @@ parser.add_argument(
 
 reversed = parser.add_mutually_exclusive_group()
 reversed.add_argument(
-    "--pv", action="store_true", help="reverse calculate the present value (bool)"
+    "--pv",
+    action="store_true",
+    help="calculates the cash flow input given present value -c flag",
 )
 reversed.add_argument(
-    "--fv", action="store_true", help="reverse calculate the future value (bool)"
+    "--fv",
+    action="store_true",
+    help="calculates the cash flow input given future value as the -c flag",
 )
 
 args = parser.parse_args()
