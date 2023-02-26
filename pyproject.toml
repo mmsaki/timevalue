@@ -20,7 +20,6 @@ requires-python = ">=3.7"
 keywords = ["analytics", "investing", "finance"]
 authors = [{name = "Meek Msaki", email = "meek.dev3@gmail.com"}]
 classifiers = [
-    "Development Status :: 3 - Alpha",
     "Intended Audience :: Developers",
     "Intended Audience :: Financial and Insurance Industry",
     "Programming Language :: Python :: 3",
@@ -40,3 +39,5 @@ annuity = "timevalue.annuity:main"
 [project.urls]
 "Homepage" = "https://github.com/mmsaki/timevalue"
 "Bug Tracker" = "https://github.com/mmsaki/timevalue/issues"
+repository = "https://github.com/mmsaki/timevalue.git"
+changelog = "https://github.com/mmsaki/timevalue/blob/master/CHANGELOG.md"
