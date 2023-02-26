@@ -7,13 +7,14 @@ enabled = true
 template = "{tag}"
 dev_template= "{tag}.dev{ccount}"
 dirty_template = "{tag}.post{ccount}+dirty"
-starting_version = "0.0.2"
+starting_version = "v0.0.2"
 branch_formatter= "util:format_branch_name"
 tag_formatter = "util:format_tag_name"
+# version_callback = "__init__:__version__"
 
 [project]
 name = "timevalue"
-version = "v0.0.2"
+dynamic = ["version"]
 description = "A simple Python package for financial valuation"
 readme = "README.md"
 requires-python = ">=3.7"
@@ -29,8 +30,7 @@ classifiers = [
 ]
 maintainers = [
     {name = "Meek Msaki", email= "meek.dev3@gmail.com"},
-    ]
-# dynamic = ["version", "description"]
+]
 
 
 [project.scripts]
