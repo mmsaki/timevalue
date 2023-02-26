@@ -23,7 +23,6 @@ maintainers = [
     ]
 
 [project.scripts]
-timevalue = "timevalue.__main__:main"
 present = "timevalue.present:main"
 future = "timevalue.future:main"
 annuity = "timevalue.annuity:main"
