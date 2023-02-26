@@ -1,22 +1,20 @@
-[buld-system]
+[build-system]
 requires = ["setuptools", "setuptools_scm"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "analytica"
+name = "timevalue"
 version = "0.0.1"
 description = "A simple Python package for financial valuation"
-readme = "README.rst"
+readme = "README.md"
 requires-python = ">=3.7"
 keywords = ["analytics", "investing", "finance"]
-authors = [{name = "Meek Msaki"}, {email = "meek.dev3@gmail.com"}]
+authors = [{name = "Meek Msaki", email = "meek.dev3@gmail.com"}]
 classifiers = [
-    "Development Status :: 1 - Alpha",
+    "Development Status :: 3 - Alpha",
     "Intended Audience :: Developers",
     "Intended Audience :: Financial and Insurance Industry",
     "Programming Language :: Python :: 3",
-    "Programming Language :: Python :: 3.10",
-    "Programming Language :: Python :: 3.11",
     "Topic :: Office/Business :: Financial :: Investment",
     "Topic :: Software Development :: Libraries :: Python Modules",
 ]
@@ -25,7 +23,11 @@ maintainers = [
     ]
 
 [project.scripts]
-analytica = "analytica.__main__:main"
-present = "analytica.present:main"
-future = "analytica.future:main"
-annuity = "analytica.annuity:main"
+timevalue = "timevalue.__main__:main"
+present = "timevalue.present:main"
+future = "timevalue.future:main"
+annuity = "timevalue.annuity:main"
+
+[project.urls]
+"Homepage" = "https://github.com/mmsaki/timevalue"
+"Bug Tracker" = "https://github.com/mmsaki/timevalue/issues"
