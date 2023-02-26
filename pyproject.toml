@@ -10,8 +10,6 @@ dirty_template = "{tag}.alpha{ccount}+dirty"
 starting_version = "v0.0.2"
 branch_formatter= "util:format_branch_name"
 tag_formatter = "util:format_tag_name"
-count_commits_from_version_file = true
-version_file = "__init__"
 
 [project]
 name = "timevalue"
