@@ -1,10 +1,13 @@
 [build-system]
-requires = ["setuptools", "setuptools_scm"]
+requires = ["setuptools", "setuptools_scm", "setuptools-git-versioning"]
 build-backend = "setuptools.build_meta"
+
+[tool.setuptools-git-versioning]
+enabled = true
 
 [project]
 name = "timevalue"
-version = "0.0.1"
+version = "0.0.2"
 description = "A simple Python package for financial valuation"
 readme = "README.md"
 requires-python = ">=3.7"
@@ -21,6 +24,8 @@ classifiers = [
 maintainers = [
     {name = "Meek Msaki", email= "meek.dev3@gmail.com"},
     ]
+dynamic = ["version", "description"]
+
 
 [project.scripts]
 present = "timevalue.present:main"
