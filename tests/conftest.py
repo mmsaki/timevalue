@@ -1,6 +1,6 @@
 import pytest
 
-from analytica.investing import annuity, perpetuity, time_value_money
+from timevalue.investing import annuity, perpetuity, time_value_money
 
 
 @pytest.fixture(scope="module")

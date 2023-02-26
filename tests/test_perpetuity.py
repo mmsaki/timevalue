@@ -1,6 +1,3 @@
-from analytica.investing import perpetuity
-
-
 def test_present_value_of_perpetuity(perpetuity_fixture):
     """Test the future value of perpetuity.
     pv = c / r
