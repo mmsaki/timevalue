@@ -14,11 +14,11 @@ tag_formatter = "util:format_tag_name"
 [project]
 name = "timevalue"
 dynamic = ["version"]
-description = "A simple Python package for financial valuation"
+description = "A python package for time money value calculations, annuity and perpetuity"
 readme = "README.md"
 requires-python = ">=3.7"
 keywords = ["analytics", "investing", "finance"]
-authors = [{name = "Meek Msaki", email = "meek.dev3@gmail.com"}]
+authors = [{name = "Meek Msaki", email = "meek10x@gmail.com"}]
 classifiers = [
     "Intended Audience :: Developers",
     "Intended Audience :: Financial and Insurance Industry",
@@ -27,7 +27,7 @@ classifiers = [
     "Topic :: Software Development :: Libraries :: Python Modules",
 ]
 maintainers = [
-    {name = "Meek Msaki", email= "meek.dev3@gmail.com"},
+    {name = "Meek Msaki", email= "meek10x@gmail.com"},
 ]
 
 
