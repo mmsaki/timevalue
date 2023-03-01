@@ -24,7 +24,7 @@ Run test:
 pytest
 ```
 
-# Build
+## Build
 
 Install build
 
@@ -38,7 +38,7 @@ Build package project
 python -m build
 ```
 
-# Distribution
+## Distribution
 
 You’ll need to install Twine:
 
@@ -50,4 +50,12 @@ For test distribution use testpypi:
 
 ```bash
 python -m twine upload --repository testpypi dist/*
+```
+
+## Versioning
+
+Checking dirty and beta versions for project using [setuptools_git_versioning]()
+
+```bash
+python -m setuptools_git_versioning
 ```
