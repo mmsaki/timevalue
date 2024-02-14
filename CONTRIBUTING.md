@@ -54,7 +54,15 @@ python -m twine upload --repository testpypi dist/*
 
 ## Versioning
 
-Checking dirty and beta versions for project using [setuptools_git_versioning]()
+Install setuptools_git_versioning:
+
+```bash
+pip install setuptools-git-versioning
+```
+
+Checking dirty and beta versions for project using [setuptools_git_versioning](https://setuptools-git-versioning.readthedocs.io/en/stable/)
+
+Run:
 
 ```bash
 python -m setuptools_git_versioning
