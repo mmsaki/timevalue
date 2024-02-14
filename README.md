@@ -6,6 +6,14 @@ Timevalue is a simple Python package for finding the time value of money
 pip install timevalue
 ```
 
+## Run Tests
+
+To run tests:
+
+```bash
+pytest --verbosity=1
+```
+
 ## Future & Present Cli Commands
 
 Find future value of money for $1000$ at $0.03%$ interest for $2$ periods:
