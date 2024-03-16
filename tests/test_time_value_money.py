@@ -1,4 +1,4 @@
-from timevalue.investing import time_value_money
+from src.timevalue.investing import time_value_money
 
 
 def test_present_value_of_money(time_value_money_fixture):

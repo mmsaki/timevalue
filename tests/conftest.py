@@ -1,6 +1,6 @@
 import pytest
 
-from timevalue.investing import annuity, perpetuity, time_value_money
+from src.timevalue.investing import annuity, perpetuity, time_value_money
 
 
 @pytest.fixture(scope="module")
