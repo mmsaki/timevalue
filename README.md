@@ -1,5 +1,12 @@
 # Timevalue
 
+![PyPI - Version](https://img.shields.io/pypi/v/timevalue)
+![PyPI - Downloads](https://img.shields.io/pypi/dm/timevalue)
+![GitHub Issues or Pull Requests](https://img.shields.io/github/issues/mmsaki/timevalue)
+![GitHub License](https://img.shields.io/github/license/mmsaki/timevalue)
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/mmsaki/timevalue)
+![X (formerly Twitter) Follow](https://img.shields.io/twitter/follow/msakiart)
+
 Timevalue is a simple Python package for finding the time value of money
 
 ```bash
